@@ -1,0 +1,132 @@
+.aboutUs {
+  margin-top: 60px;
+  position: relative;
+  &__presentation {
+    background-image: url("./images/aboutUsBackground.webp");
+    background-position: center;
+    background-size: cover;
+  }
+  &__container {
+    padding: 38px 20px 160px;
+    background: linear-gradient(
+      135deg,
+      rgba(248, 248, 248, 1) 60%,
+      rgba(248, 248, 248, 0) 100%
+    );
+  }
+  &__subtitle {
+    margin-bottom: 35px;
+    color: #777;
+  }
+  &__title {
+    color: #111;
+  }
+  &__text {
+    font: $Archivo-400;
+    font-size: 14px;
+    line-height: 24px;
+    color: #777;
+    margin-bottom: 12px;
+  }
+  &__subSection {
+    width: 270px;
+    &__figure {
+      width: 270px;
+      & > img {
+        width: 100%;
+      }
+    }
+    &-variant1 {
+      margin: -112px auto 0;
+    }
+    &-variant2 {
+      margin: 45px auto 0;
+    }
+    &__salient {
+      background-repeat: no-repeat;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      width: 270px;
+      margin-top: -5px;
+      padding: 145px 0 0;
+      color: #111;
+      &-variant1 {
+        background-image: url("./images/people.svg");
+        background-position: 100% 25%;
+        box-shadow: 0px 8px 16px rgba(34, 34, 34, 0.02);
+      }
+      &-variant2 {
+        background-color: #222;
+        color: #fff;
+        background-image: url("./images/calendar.svg");
+        background-position: 50% 25%;
+        // background-position: top;
+      }
+      &-title {
+        font: $OldStandard-400;
+        font-size: 30px;
+        line-height: 30px;
+        letter-spacing: -0.9px;
+      }
+      &-text {
+        font: $Roboto-400;
+        font-size: 14px;
+        line-height: 22px;
+        width: 200px;
+        margin: 21px auto 38px;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .aboutUs {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 60px 0 0 auto;
+    &__presentation {
+      margin-top: 150px;
+      width: 100%;
+    }
+    &__container {
+      padding: 38px 20px 160px 185px;
+      background: linear-gradient(
+        135deg,
+        rgba(248, 248, 248, 1) 50%,
+        rgba(248, 248, 248, 0) 100%
+      );
+    }
+    &__title {
+      max-width: 450px;
+      margin-right: auto;
+    }
+    &__text {
+      max-width: 400px;
+    }
+    &__subSectionContainer {
+      margin-right: -90px;
+      z-index: 2;
+    }
+    &__subSection {
+      display: flex;
+      width: 570px;
+      gap: 30px;
+      &-variant1 {
+        flex-direction: row-reverse;
+        margin: 0 auto;
+        & > figure {
+          margin-top: 30px;
+        }
+      }
+      &-variant2 {
+        & > figure {
+          margin-top: -30px;
+        }
+      }
+    }
+  }
+}

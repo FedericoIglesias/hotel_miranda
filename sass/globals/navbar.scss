@@ -1,0 +1,287 @@
+.header {
+  background-color: #222222;
+  &__container {
+    max-width: 1420px;
+    margin: 0 auto;
+  }
+  &__welcomeTextDesktop {
+    display: none;
+    text-align: left;
+    color: #fff;
+    font: $Roboto-400;
+    line-height: 18.75px;
+    padding: 10px 0;
+  }
+  &__navbar {
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.29);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+    padding: 2.5px 20px;
+    &__menu {
+      cursor: pointer;
+      & > div {
+        width: 20px;
+        height: 1.5px;
+        background-color: #111;
+        margin: 5.3px 20px 5.3px 0;
+        transform-origin: left;
+      }
+    }
+    &__brand {
+      color: #111;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      &-logo {
+        display: inline-block;
+        font: $Archivo-700;
+        text-align: center;
+        margin-right: 15px;
+        box-shadow: 0px 14px 24px rgba(139, 139, 139, 0.25);
+        line-height: 36px;
+        font-size: 18px;
+        width: 36px;
+      }
+      &-text {
+        font: $Archivo-400;
+        font-size: 13px;
+        line-height: 14px;
+        width: 60px;
+      }
+    }
+    &__linkList {
+      font: $Archivo-600;
+    }
+    &__link {
+      margin-right: 50px;
+    }
+    &__buttons {
+      margin-left: auto;
+      &-icon {
+        display: inline-block;
+        position: relative;
+        margin: 0 10px;
+        text-align: center;
+        line-height: 65px;
+      }
+    }
+  }
+}
+
+.desktopNavbar {
+  display: none;
+}
+.mobileNavbar {
+  display: block;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 70px;
+  background-color: #fff;
+  width: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.29);
+  padding: 2px 20px;
+  & > li {
+    margin: 25px 0;
+  }
+}
+
+//Estilos al abrir o cerrar el menu responsive
+.initialHidden {
+  display: none;
+}
+.hidden {
+  animation: hiddeMenu 0.5s ease-in-out 0s forwards;
+  overflow: hidden;
+}
+.visible {
+  display: block;
+  animation: showMenu 0.5s ease-in-out 0s forwards;
+  overflow: hidden;
+}
+
+.open {
+  & div:first-child {
+    animation: burgerUpOpen 0.5s ease-in-out 0s forwards;
+  }
+  & div:nth-child(2) {
+    animation: burgerMidOpen 0.5s ease-in-out 0s forwards;
+  }
+  & div:nth-child(3) {
+    animation: burgerDownOpen 0.5s ease-in-out 0s forwards;
+  }
+}
+.close {
+  & div:first-child {
+    animation: burgerUpClose 0.5s ease-in-out 0s forwards;
+  }
+  & div:nth-child(2) {
+    animation: burgerMidClose 0.5s ease-in-out 0s forwards;
+  }
+  & div:nth-child(3) {
+    animation: burgerDownClose 0.5s ease-in-out 0s forwards;
+  }
+}
+
+@media (min-width: 1000px) {
+  .header {
+    padding-bottom: 60px;
+    &__welcomeTextDesktop {
+      display: block;
+    }
+    &__navbar {
+      margin-bottom: -60px;
+      //position: relative;
+      top: 0px;
+      left: 0px;
+      right: 0;
+      margin: 0 auto;
+      padding: 20px;
+      max-width: 1420px;
+      transition: transform 0.5s;
+      &__menu {
+        display: none;
+      }
+      &__brand {
+        &-logo {
+          margin-right: 28px;
+          line-height: 80px;
+          font-size: 40px;
+          width: 80px;
+        }
+        &-text {
+          font-size: 26px;
+          line-height: 28.3px;
+          width: 140px;
+        }
+      }
+      &__linkList {
+        margin: 0 auto 0 120px;
+      }
+      &__buttons {
+        display: flex;
+        margin-right: 120px;
+        gap: 20px;
+        &-icon {
+          margin: 0;
+          font-size: 30px;
+          padding: 0 20px;
+        }
+      }
+    }
+  }
+  .topPageBehavior {
+    transform: translateY(38.75px);
+  }
+  .slideUpMenu {
+    transform: translateY(-125px);
+  }
+  .desktopNavbar {
+    display: flex;
+    min-width: 430px;
+  }
+  .mobileNavbar {
+    display: none;
+  }
+}
+
+//Animaciones - Keyframes ----------------------------------------------------
+@keyframes hiddeMenu {
+  0% {
+    height: 194.6px;
+    opacity: 1;
+  }
+  99% {
+    height: 0px;
+    opacity: 1;
+    z-index: 10;
+  }
+  100% {
+    opacity: 0;
+    z-index: -10;
+  }
+}
+@keyframes showMenu {
+  0% {
+    height: 0px;
+    opacity: 1;
+  }
+  100% {
+    height: 194.6px;
+  }
+}
+
+@keyframes burgerUpOpen {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(6.5px);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+@keyframes burgerDownOpen {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-6.5px);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}
+@keyframes burgerMidOpen {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes burgerUpClose {
+  0% {
+    transform: rotate(45deg);
+  }
+  50% {
+    transform: rotate(0);
+    transform: translateY(6.5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+@keyframes burgerMidClose {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes burgerDownClose {
+  0% {
+    transform: rotate(-45deg);
+  }
+  50% {
+    transform: translateY(-6.5px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

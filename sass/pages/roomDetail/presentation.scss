@@ -1,0 +1,88 @@
+.pageDetailsPresentation {
+  padding: 0 20px;
+  width: 100%;
+  &__container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    width: 95%;
+  }
+  &__subtitle {
+    color: #777;
+    font-size: 14px;
+    line-height: 15px;
+  }
+  &__title {
+    color: #222;
+    font-size: 40px;
+    line-height: 48px;
+    margin: 12px 0 16px;
+  }
+  &__prices {
+    font: $Archivo-700;
+    line-height: 43px;
+    color: #bead8e;
+    &-item > p {
+      font-size: 32px;
+      display: inline-block;
+    }
+    &-item > small {
+      font-size: 13px;
+      margin-left: -2px;
+    }
+    & > :last-child {
+      display: none;
+    }
+  }
+  &__img {
+    margin: 16px 0 50px;
+    & > img {
+      width: 100%;
+      aspect-ratio: 16/9;
+    }
+  }
+}
+.offerPrice {
+  & > :first-child {
+    line-height: 25px;
+    & > p {
+      text-decoration: line-through;
+      font-size: 23px;
+    }
+    & > small {
+      text-decoration: line-through;
+      font-size: 11px;
+    }
+  }
+  & > :last-child {
+    display: inline-block;
+    color: #de5777;
+  }
+}
+
+@media (min-width: 1000px) {
+  .pageDetailsPresentation {
+    max-width: 770px;
+    margin-left: 0;
+    padding: 0;
+    &__container {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      padding: 27.5px 40px;
+      position: relative;
+    }
+    &__title {
+      font-size: 48px;
+      line-height: 48px;
+      letter-spacing: -1.44px;
+      margin-right: 115px;
+    }
+    &__img {
+      margin-top: -73px;
+    }
+    &__prices {
+      text-align: right;
+    }
+  }
+}

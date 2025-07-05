@@ -1,0 +1,102 @@
+.pageRoomsGrid {
+  padding: 0 20px;
+  &__container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    justify-items: center;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  &__selectInput {
+    margin-right: auto;
+    &__select {
+      border: none;
+      outline: none;
+      padding: 25px;
+      background-color: #f8f8f8;
+      @include Archivo(#777, 400, 14px, 15.23px);
+      cursor: pointer;
+    }
+    &__option {
+      background-color: #f8f8f8;
+      color: #222;
+    }
+  }
+  &__room {
+    padding-bottom: 20px;
+  }
+  &__img {
+    & > img {
+      width: 100%;
+    }
+  }
+  &__iconsBar {
+    width: 256px;
+    padding: 13px 0;
+    position: relative;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: -20px auto 30px;
+    box-shadow: 0px 8px 16px rgba(138, 138, 138, 0.05);
+    z-index: 2;
+  }
+  &__legend {
+    background-color: #fff;
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+    &-title {
+      font: $OldStandard-400;
+      font-size: 28px;
+      line-height: 36px;
+      letter-spacing: -1.2px;
+      color: #222;
+    }
+    &-text {
+      font: $Roboto-400;
+      font-size: 14px;
+      line-height: 24px;
+      margin: 12px auto 0;
+      color: #777;
+    }
+    &-price {
+      font: $Archivo-700;
+      font-size: 16px;
+      line-height: 41px;
+      color: #bead8e;
+      & > a {
+        color: #bdbdbd;
+      }
+    }
+  }
+  &__paginateBar {
+    margin: 25px auto 50px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 280px;
+    @include Roboto(#222, 700, 14px, 19px);
+    & > span {
+      padding: 10px 15px;
+      cursor: pointer;
+    }
+    & > .active {
+      background-color: #bead8e;
+      color: #fff;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .pageRoomsGrid {
+    &__container {
+      grid-template-columns: repeat(3, 1fr);
+      max-width: 1170px;
+    }
+    &__selectInput {
+      grid-column: 1/4;
+    }
+  }
+}

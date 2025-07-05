@@ -1,0 +1,51 @@
+.pagesHeader {
+  background-image: url("./images/pageHeaderBackground.webp");
+  background-size: cover;
+  background-position: bottom;
+  background-attachment: fixed;
+  &__background {
+    background-color: #333333cc;
+  }
+  &__container {
+    color: white;
+    margin: 70px auto 60px;
+    padding: 75px 20px 0;
+    max-width: 1210px;
+  }
+  &__title {
+    margin: 16px 0 47px;
+  }
+  &__breadcrumbs {
+    background-color: #fff;
+    width: fit-content;
+    padding: 0 24px;
+    color: #222;
+    text-align: center;
+    line-height: 50px;
+    margin-left: auto;
+    & a {
+      font: $Archivo-700;
+      font-size: 16px;
+      line-height: 17.4px;
+      letter-spacing: -0.48px;
+    }
+    & > .active {
+      color: #bead8e;
+    }
+    & > .hiddeBreadcrumb {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .pagesHeader {
+    &__container {
+      margin: 0 auto 120px;
+      padding-top: 157px;
+    }
+    &__title {
+      margin: 24px 0;
+    }
+  }
+}

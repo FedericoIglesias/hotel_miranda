@@ -1,0 +1,92 @@
+.pageOfferPopular {
+  background-color: #222;
+  padding: 20px;
+  margin-bottom: 60px;
+  &__container {
+    width: 100%;
+    max-width: 500px;
+    margin: 28px auto;
+    text-align: center;
+  }
+  &__subtitle {
+    font: $Archivo-400;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 2.8px;
+    color: #bdac8d;
+  }
+  &__title {
+    font: $OldStandard-400;
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -0.8px;
+    color: #fff;
+    margin: 25px auto 48px;
+  }
+  &__slider {
+    width: 100%;
+    &-slide {
+      background-color: #fff;
+    }
+    &-img {
+      width: 100%;
+    }
+    & > .pageRoomsList__legend {
+      margin-bottom: 28px;
+    }
+    &__swiper {
+      max-width: 365px;
+      & .swiper-button-prev {
+        color: #111;
+        background-color: #fff;
+        width: 32px;
+        height: 32px;
+        margin-top: -7rem;
+        transition: all 0.2s;
+        &:active {
+          transform: scale(0.9);
+        }
+        &::after {
+          --swiper-navigation-size: 10px;
+        }
+      }
+      & .swiper-button-next {
+        color: #fff;
+        background-color: #bdac8d;
+        width: 32px;
+        height: 32px;
+        margin-top: -7rem;
+        transition: all 0.2s;
+        &:active {
+          transform: scale(0.9);
+        }
+        &::after {
+          --swiper-navigation-size: 10px;
+        }
+      }
+    }
+    &__legend {
+      padding-bottom: 30px;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .pageOfferPopular {
+    &__container {
+      max-width: 1170px;
+      margin: 40px auto 100px;
+    }
+    &__title {
+      font-size: 80px;
+      line-height: 80px;
+      letter-spacing: -2.4px;
+      margin: 80px auto;
+    }
+    &__slider {
+      &__swiper {
+        max-width: 1070px;
+      }
+    }
+  }
+}

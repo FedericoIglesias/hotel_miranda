@@ -1,0 +1,25 @@
+.pageDetailsDescription {
+  padding: 0 20px;
+  font: $Roboto-400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #777;
+  //max-width: 500px;
+  margin: 0 auto;
+  &__text {
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .pageDetailsDescription {
+    max-width: 770px;
+    margin-left: 0;
+    padding: 0;
+    &__text {
+      width: 100%;
+      max-width: 770px;
+    }
+  }
+}

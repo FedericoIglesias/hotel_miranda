@@ -1,0 +1,234 @@
+.menu {
+  padding-top: 156px;
+  background-image: url("./images/menuBackground.svg");
+  background-repeat: no-repeat;
+  background-size: 115px;
+  background-position: calc(100% + 25px) 3%;
+  &__container {
+    padding: 0 20px;
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+  }
+  &__subtitle {
+    margin: 24px auto;
+    color: #777;
+  }
+  &__title {
+    color: #222;
+  }
+  &__options {
+    width: 100%;
+    &__swiper-controls {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      display: flex;
+      justify-content: flex-end;
+    }
+    & .swiper-button-prev {
+      color: #111;
+      background-color: #fff;
+      width: 32px;
+      height: 32px;
+      &::after {
+        --swiper-navigation-size: 10px;
+      }
+    }
+    & .swiper-button-next {
+      color: #fff;
+      background-color: #bdac8d;
+      width: 32px;
+      height: 32px;
+      &::after {
+        --swiper-navigation-size: 10px;
+      }
+    }
+    &__container {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+      margin: 16px auto;
+      cursor: pointer;
+    }
+    &__figure {
+      width: 120px;
+      display: flex;
+      & > img {
+        width: 100%;
+      }
+    }
+    &__cont {
+      width: 185px;
+      color: #222;
+    }
+    &__title {
+      font: $OldStandard-400;
+      letter-spacing: -0.72px;
+    }
+    &__text {
+      font: $Roboto-400;
+      font-size: 14px;
+      line-height: 24px;
+      margin-top: 12px;
+    }
+    &-activeOption {
+      background-color: #222;
+      position: relative;
+      & > .menu__options__cont {
+        color: #fff;
+      }
+    }
+    &__controls {
+      display: flex;
+      gap: 16px;
+      justify-content: flex-end;
+      margin: 24px 0 60px;
+      &-container {
+        width: 36px;
+        padding: 18px;
+        position: relative;
+        cursor: pointer;
+        transition: all 0.2s;
+        &:active {
+          transform: scale(0.9);
+        }
+      }
+      &-arrow {
+        width: 6.8px;
+        height: 6.8px;
+        border-left: solid 2px;
+        border-bottom: solid 2px;
+        position: absolute;
+        top: 50%;
+        bottom: 50%;
+        left: 50%;
+        right: 50%;
+        margin: auto;
+        translate: (-50%);
+      }
+      & > .controlLeft {
+        background-color: #f8f8f8;
+        & > .arrowLeft {
+          border-color: #111;
+          transform: rotate(45deg);
+        }
+      }
+      & > .controlRight {
+        background-color: #bead8e;
+        box-shadow: 0px 14px 24px rgba(190, 173, 142, 0.15);
+        & > .arrowRight {
+          border-color: #fff;
+          transform: rotate(-135deg);
+        }
+      }
+    }
+    &__individualSlider {
+      &-img {
+        width: 100%;
+      }
+      &-dots {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        & > span {
+          background-color: #bead8e;
+        }
+      }
+    }
+  }
+  &__resume {
+    background-color: #222;
+    margin: 60px 0;
+    padding: 48px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+    text-align: center;
+    &__img {
+      margin-bottom: 16px;
+    }
+    &__title {
+      font: $Roboto-700;
+      font-size: 60px;
+      line-height: 82px;
+      color: #fff;
+      & > small {
+        font-size: 16px;
+        line-height: 22px;
+      }
+    }
+    &__text {
+      font: $Roboto-700;
+      font-size: 16px;
+      line-height: 22px;
+      color: #999;
+    }
+  }
+}
+.swiperFoodMenu {
+  overflow: hidden;
+}
+.swiperMenuOption {
+  overflow: hidden;
+}
+
+@media (min-width: 1000px) {
+  .menu {
+    background-position: 80px 3%;
+    &__container {
+      max-width: 1210px;
+    }
+    &__options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 100px;
+      &__container {
+        justify-content: flex-start;
+      }
+      &-activeOption {
+        &::after {
+          content: "";
+          background-image: url("./images/factArrowIcon.svg");
+          background-repeat: no-repeat;
+          background-position: 0 50%;
+          width: 35px;
+          padding: 17px 0;
+          position: absolute;
+          right: 40px;
+        }
+      }
+      &__column-inactive {
+        display: block;
+      }
+      &__cont {
+        width: 285px;
+      }
+      &__controls {
+        position: absolute;
+        top: 0;
+        right: 20px;
+        &-container {
+          width: 70px;
+          padding: 35px;
+        }
+        &-arrow {
+          width: 10px;
+          height: 10px;
+        }
+      }
+      &__individualSlider {
+        &-dots {
+          display: none;
+        }
+      }
+    }
+    &__resume {
+      flex-direction: row;
+      justify-content: space-evenly;
+      max-width: 1170px;
+      margin: 120px auto;
+    }
+  }
+}

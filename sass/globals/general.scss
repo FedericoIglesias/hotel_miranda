@@ -1,0 +1,46 @@
+.button {
+  @include Archivo(#fff, 700, 14px, 15.2px, 2.8px);
+  width: 250px;
+  padding: 23px 0;
+  border: none;
+  margin: 12px 0;
+  transition: background 0.3s;
+  cursor: pointer;
+  &-variant1 {
+    background-color: #bead8e;
+  }
+  &-variant2 {
+    background-color: #333;
+    border: 2px solid rgba(255, 255, 255, 0.33);
+  }
+}
+
+.homeTitle {
+  font: $OldStandard-400;
+  font-size: 56px;
+  line-height: 60px;
+  letter-spacing: -1.2px;
+  margin-bottom: 15px;
+}
+
+.homeSubtitle {
+  font: $Archivo-700;
+  letter-spacing: 2.8px;
+  font-size: 14px;
+  line-height: 18px;
+}
+
+.pagesSecundaryTitle {
+  font: $OldStandard-400;
+  font-size: 30px;
+  line-height: 30px;
+  color: #222;
+}
+
+@media (min-width: 1000px) {
+  .homeTitle {
+    font-size: 80px;
+    line-height: 80px;
+    letter-spacing: -2.4px;
+  }
+}

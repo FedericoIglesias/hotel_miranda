@@ -1,0 +1,38 @@
+/* font-family: 'Archivo', sans-serif;
+font-family: 'Old Standard TT', serif;
+font-family: 'Roboto', sans-serif; */
+$Archivo-400: normal 400 26px/28.3px "Archivo", sans-serif;
+$Archivo-600: normal 600 16px/17.4px "Archivo", sans-serif;
+$Archivo-700: normal 700 14px/15.2px "Archivo", sans-serif;
+$OldStandard-400: normal 400 24px/24px "Old Standard TT", serif;
+$Roboto-400: normal 400 16px/26px "Roboto", sans-serif;
+$Roboto-700: normal 700 16px/18.75px "Roboto", sans-serif;
+$Roboto-500: normal 500 15px/17.6px "Roboto", sans-serif;
+
+@mixin Archivo($color, $weight, $size, $lineHeight, $letter: normal) {
+  color: $color;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lineHeight;
+  letter-spacing: $letter;
+  font-family: "Archivo", sans-serif;
+}
+@mixin OldStandard($color, $weight, $size, $lineHeight, $letter: normal) {
+  color: $color;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lineHeight;
+  letter-spacing: $letter;
+  font-family: "Old Standard TT", serif;
+}
+@mixin Roboto($color, $weight, $size, $lineHeight, $letter: normal) {
+  color: $color;
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lineHeight;
+  letter-spacing: $letter;
+  font-family: "Roboto", sans-serif;
+}

@@ -1,0 +1,230 @@
+.rooms {
+  margin: 60px auto;
+  text-align: center;
+  &__subtitle {
+    color: #777;
+  }
+  &__title {
+    margin: 25px auto;
+    color: #222;
+  }
+  &__slider {
+    max-width: 500px;
+    margin: 0 auto;
+    &__header {
+      width: 256px;
+      position: relative;
+      background-color: #fff;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      margin: 0 auto -20px;
+      padding: 13px 0;
+      box-shadow: 0px 8px 16px rgba(138, 138, 138, 0.05);
+      z-index: 2;
+    }
+    &__swiper {
+      width: 100%;
+      max-width: 365px;
+      &-img {
+        width: 100%;
+      }
+      & .swiper-button-prev {
+        color: #111;
+        background-color: #fff;
+        width: 32px;
+        height: 32px;
+        margin-top: -7rem;
+        transition: all 0.2s;
+        &:active {
+          transform: scale(0.9);
+        }
+        &::after {
+          --swiper-navigation-size: 10px;
+        }
+      }
+      & .swiper-button-next {
+        color: #fff;
+        background-color: #bdac8d;
+        width: 32px;
+        height: 32px;
+        margin-top: -7rem;
+        transition: all 0.2s;
+        &:active {
+          transform: scale(0.9);
+        }
+        &::after {
+          --swiper-navigation-size: 10px;
+        }
+      }
+    }
+    &__foot {
+      background-color: #fff;
+      width: 90%;
+      margin: -20px auto 30px;
+      padding: 20px 25px;
+      position: relative;
+      z-index: 5;
+      &-title {
+        font: $OldStandard-400;
+        font-size: 28px;
+        line-height: 36px;
+        letter-spacing: -1.2px;
+        color: #222;
+      }
+      &-text {
+        font: $Roboto-400;
+        font-size: 14px;
+        line-height: 24px;
+        margin: 12px auto;
+        color: #777;
+      }
+      &-price {
+        font: $Archivo-700;
+        font-size: 32px;
+        line-height: 43px;
+        color: #bead8e;
+        & > small {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+  &__video {
+    background-color: #222;
+    color: #fff;
+    text-align: left;
+    padding: 20px;
+    &__container {
+      max-width: 500px;
+      margin: 0 auto;
+      & > a {
+        width: fit-content;
+      }
+    }
+    &__subtitle {
+      margin: 44px 0 32px;
+      color: #bdac8d;
+    }
+    &__text {
+      font: $Archivo-400;
+      font-size: 14px;
+      line-height: 24px;
+      color: #c2c2c2;
+      margin: 15px 0 30px;
+    }
+    &__cont {
+      width: 100%;
+      margin-bottom: 24px;
+      & iframe {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .rooms {
+    margin-top: 120px;
+    overflow-x: hidden;
+    &__slider {
+      // max-width: 750px;
+      max-width: unset;
+      &__header {
+        opacity: 0;
+        transition: opacity 0.5s;
+      }
+      &__swiper {
+        max-width: 750px;
+        overflow: visible;
+        & > .swiper-wrapper {
+          & > .swiper-slide {
+            transform: scale(0.9);
+          }
+          & > .swiper-slide-active {
+            transform: scale(1);
+          }
+        }
+        &-img {
+          width: 100%;
+        }
+        & > .swiper-wrapper > .swiper-slide-active > .rooms__slider__foot {
+          opacity: 1;
+        }
+        & > .swiper-wrapper > .swiper-slide-active > .rooms__slider__header {
+          opacity: 1;
+        }
+        & > .swiper-button-lock {
+          display: flex;
+        }
+        & .swiper-button-prev {
+          width: 50px;
+          height: 50px;
+          &::after {
+            --swiper-navigation-size: 15px;
+          }
+        }
+        & .swiper-button-next {
+          width: 50px;
+          height: 50px;
+          &::after {
+            --swiper-navigation-size: 15px;
+          }
+        }
+      }
+      &__foot {
+        display: flex;
+        text-align: left;
+        align-items: center;
+        padding: 35px;
+        opacity: 0;
+        transition: opacity 0.5s;
+        &-text {
+          width: 80%;
+          margin-left: 0;
+        }
+      }
+    }
+    &__video {
+      padding: 120px 20px;
+      position: relative;
+      &__container {
+        max-width: 1170px;
+        display: grid;
+        grid-template-areas:
+          "subtitle video"
+          "title video"
+          "text video"
+          "btn video";
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+        &::after {
+          content: "";
+          width: 30%;
+          background-color: #ad9d82;
+          position: absolute;
+          right: 0;
+          top: 0;
+        }
+      }
+      &__subtitle {
+        margin: 16px 0 36px;
+        grid-area: subtitle;
+      }
+      &__title {
+        grid-area: title;
+      }
+      &__text {
+        max-width: 485px;
+        margin: 20px 0 10px;
+        grid-area: text;
+      }
+      &__cont {
+        max-width: 570px;
+        grid-area: video;
+        z-index: 1;
+        margin: 0;
+      }
+    }
+  }
+}

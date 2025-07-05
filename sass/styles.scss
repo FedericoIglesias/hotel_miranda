@@ -1,0 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;700&family=Old+Standard+TT&family=Roboto:wght@400;500;700&display=swap");
+@import "./globals/default.scss";
+@import "./globals/variables.scss";
+@import "./globals/general.scss";
+@import "./globals/navbar.scss";
+@import "./globals/footer.scss";
+/* home page */
+@import "./pages/home/banner.scss";
+@import "./pages/home/aboutUs.scss";
+@import "./pages/home/rooms.scss";
+@import "./pages/home/facilities.scss";
+@import "./pages/home/menu.scss";
+/* pages */
+@import "./pages/pagesHeader.scss";
+/* about us page */
+@import "./pages/aboutUs/presentation.scss";
+@import "./pages/aboutUs/restaurant.scss";
+@import "./pages/aboutUs/facilities.scss";
+@import "./pages/aboutUs/counter.scss";
+//rooms page
+@import "./pages/rooms/grid.scss";
+@import "./pages/rooms/list.scss";
+//room details page
+@import "./pages/roomDetail/desktopLayout.scss";
+@import "./pages/roomDetail/presentation.scss";
+@import "./pages/roomDetail/availability.scss";
+@import "./pages/roomDetail/details.scss";
+@import "./pages/roomDetail/amenities.scss";
+@import "./pages/roomDetail/person.scss";
+@import "./pages/roomDetail/cancellation.scss";
+@import "./pages/roomDetail/relatedRooms.scss";
+//offers page
+@import "./pages/offers/list.scss";
+@import "./pages/offers/popular.scss";
+//contact page
+@import "./pages/contact/info.scss";
+@import "./pages/contact/form.scss";

@@ -1,0 +1,60 @@
+.pageDetailsPerson {
+  text-align: center;
+  max-width: 370px;
+  position: relative;
+  //margin: 0 auto;
+  &__avatar {
+    width: 150px;
+    aspect-ratio: 1/1;
+    border-radius: 75px;
+    background-color: #d5d5d5;
+    margin: 100px auto 40px;
+    position: relative;
+    overflow: hidden;
+    &-person {
+      width: 100%;
+    }
+    &-check {
+      position: absolute;
+      top: 100px;
+      right: 110px;
+    }
+  }
+  &__title {
+    @extend .pagesSecundaryTitle;
+  }
+  &__subtitle {
+    font: $Archivo-700;
+    font-size: 14px;
+    line-height: 15px;
+    letter-spacing: 2.8px;
+    color: #bdac8d;
+    margin: 15px auto 25px;
+  }
+  &__text {
+    font: $Archivo-400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #777;
+    width: 85%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  .pageDetailsPerson {
+    margin-left: 0;
+    background: #ffffff;
+    box-shadow: 0px 14px 24px rgba(190, 173, 142, 0.27);
+    padding: 60px 25px 50px;
+    &__avatar {
+      margin-top: 0;
+      &-check {
+        top: 60px;
+      }
+    }
+    &__text {
+      width: 100%;
+    }
+  }
+}

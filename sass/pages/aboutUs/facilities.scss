@@ -1,0 +1,76 @@
+.pageAboutFacility {
+  background-color: #222;
+  color: #fff;
+  padding: 42px 20px;
+  &__subtitle {
+    margin: 6px 0 16px;
+    text-align: center;
+  }
+  &__title {
+    margin-bottom: 32px;
+    text-align: center;
+  }
+  &__item {
+    position: relative;
+    background-color: #292929;
+    padding: 18px;
+    width: 100%;
+    max-width: 285px;
+    margin: 0 auto;
+  }
+  &__slider {
+    max-width: 375px;
+    margin: 0 auto;
+    overflow: hidden;
+    &__imgs {
+      margin-bottom: 30px;
+      & > img {
+        transition: all 0.3s;
+        &:hover {
+          animation: facilityAnimation 1.2s linear;
+        }
+      }
+      & > span {
+        color: #222;
+        font: $Archivo-700;
+        font-size: 120px;
+        line-height: 130px;
+        position: absolute;
+        top: -18px;
+        right: 0;
+      }
+    }
+    &__dots {
+      display: flex;
+      justify-content: center;
+      margin-top: 24px;
+      & > span {
+        background-color: #bead8e;
+      }
+    }
+    &__title {
+      @extend .facilities__slider__title;
+      color: #fff;
+    }
+    &__text {
+      @extend .facilities__slider__text;
+      color: #fff;
+    }
+  }
+}
+
+@media (min-width: 1000px) {
+  .pageAboutFacility {
+    padding: 100px 20px;
+    &__item {
+      max-width: unset;
+      padding: 40px 15%;
+    }
+    &__slider {
+      max-width: 1070px;
+      &__dots {
+        display: none;
+      }
+    }
+  }
+}

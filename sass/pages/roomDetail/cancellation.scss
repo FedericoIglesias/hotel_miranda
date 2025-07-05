@@ -1,0 +1,28 @@
+.pageDetailsCancellation {
+  padding: 20px;
+  margin: 80px 0 20px;
+  &__title {
+    @extend .pagesSecundaryTitle;
+  }
+  & > hr {
+    width: 100%;
+    border-color: #f1f1f1;
+    margin: 13px 0 35px;
+  }
+  &__text {
+    max-width: 500px;
+    font: $Roboto-400;
+    color: #777;
+  }
+}
+
+@media (min-width: 1000px) {
+  .pageDetailsCancellation {
+    padding: 50px;
+    width: 100%;
+    max-width: 770px;
+    &__text {
+      max-width: 660px;
+    }
+  }
+}
