@@ -1,0 +1,84 @@
+---
+import back from "../../public/images/bannerBackground.webp";
+import { gold } from "../layouts/Layout.astro";
+---
+
+<div>
+  <section>
+    <small>THE ULTIMATE LUXUARY EXPERIENCE</small>
+    <p>The Perfect Base For You</p>
+    <!-- <div> -->
+    <button class="btn1">TAKE A TOUR</button>
+    <button class="btn2">LEARN MORE</button>
+    <!-- </div> -->
+  </section>
+</div>
+
+<style define:vars={{ gold }}>
+  div {
+    background-image: url("../../public/images/bannerBackground.webp");
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+  }
+  section {
+    margin: auto;
+    height: 90vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: start;
+    padding: 10% 5%;
+    small {
+      font-size: 14px;
+      color: white;
+      font-weight: bold;
+      letter-spacing: 3px;
+    }
+    p {
+      font-size: 56px;
+      color: white;
+      font-family: serif;
+    }
+    button {
+      padding: 25px 60px;
+      border: none;
+      color: white;
+      font-weight: bold;
+      font-size: 14px;
+      letter-spacing: 3px;
+    }
+    .btn1 {
+      background-color: var(--gold);
+    }
+    .btn2 {
+      background-color: #333;
+      border: 0.1px solid gray;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-row: 1fr 1fr 1fr;
+
+      small {
+        grid-column: 1/5;
+        font-size: 20px;
+        padding-bottom: 20px;
+      }
+      p {
+        padding-bottom: 20px;
+        grid-column: 1/5;
+        font-size: 120px;
+        max-width: 800px;
+      }
+      button {
+        width: 250px;
+        grid-row: 3/4;
+        gap: 20px;
+      }
+    }
+  }
+</style>
