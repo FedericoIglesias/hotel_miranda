@@ -1,0 +1,68 @@
+---
+import GoldButton from "./goldButton.astro";
+import { gold } from "../layouts/Layout.astro";
+---
+
+<section>
+  <div>
+    <header>INTRO VIDEO</header>
+    <h3>Meet With Our Luxury Place.</h3>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+      commodo consequat you have to understand this.
+    </p>
+    <GoldButton>BOOL NOW</GoldButton>
+  </div>
+  <iframe
+    width="320"
+    height="240"
+    src="https://www.youtube.com/embed/Bu3Doe45lcU?start=25&clip=UgkxMyTmoCzN3fCZ4ti72FPRWCmhwFXKE9_e&clipt=EKjDARj4yQQ&autoplay=1&mute=1&loop=1"
+  ></iframe>
+</section>
+
+<style define:vars={{ gold }}>
+  section {
+    background-color: #222;
+    color: white;
+    padding: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    div {
+      display: flex;
+      gap: 20px;
+      flex-direction: column;
+      max-width: 500px;
+    }
+    header {
+      letter-spacing: 2px;
+      font-weight: bold;
+      color: var(--gold);
+    }
+    h3 {
+      font-size: 56px;
+      font-weight: 100;
+      font-family: serif;
+    }
+    p {
+      line-height: 30px;
+      color: #777;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      max-width: 600px;
+      height: 315px;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    section {
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+</style>
