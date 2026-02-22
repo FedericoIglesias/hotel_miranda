@@ -1,5 +1,6 @@
 ---
 import { gold } from "../layouts/Layout.astro";
+import GoldButton from "./goldButton.astro";
 ---
 
 <div class="bg">
@@ -37,7 +38,7 @@ import { gold } from "../layouts/Layout.astro";
           minim veniam, quis nostrud exercitation ullamco laboris nisi ut
           aliquip ex ea commodo consequat.
         </p>
-        <button>BOOK NOW</button>
+        <GoldButton>BOOK NOW</GoldButton>
       </div>
     </article>
   </section>
@@ -79,17 +80,6 @@ import { gold } from "../layouts/Layout.astro";
       p {
         color: #777;
         padding: 20px 0 30px;
-      }
-      button {
-        border: none;
-        background-color: var(--gold);
-        color: #fff;
-        padding: 20px 40px;
-        letter-spacing: 2px;
-        font:
-          16px "Archivo",
-          sans-serif;
-        font-weight: bold;
       }
     }
     .images {
@@ -162,14 +152,14 @@ import { gold } from "../layouts/Layout.astro";
           gap: 30px;
         }
         .image1 {
-          order:2;
+          order: 2;
           position: relative;
           bottom: -30px;
         }
         .image2 {
           position: relative;
           top: -30px;
-          img{
+          img {
             order: 2;
           }
         }

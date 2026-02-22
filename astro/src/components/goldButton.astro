@@ -1,0 +1,19 @@
+---
+import { gold } from "../layouts/Layout.astro"
+---
+<button>
+  <slot />
+</button>
+
+<style define:vars={{gold}}>
+  button {
+    background-color: var(--gold);
+    border: none;
+    padding: 20px 40px;
+    color: white;
+    font-weight: bold;
+    width: 100%;
+    max-width: 300px;
+    letter-spacing: 2px;
+  }
+</style>
