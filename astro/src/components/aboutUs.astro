@@ -1,0 +1,179 @@
+---
+import { gold } from "../layouts/Layout.astro";
+---
+
+<div class="bg">
+  <section>
+    <article class="images">
+      <div class="image1">
+        <img src="../../public/images/pool.webp" alt="pool" />
+        <article>
+          <h3>Strong Team</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor.
+          </p>
+        </article>
+      </div>
+      <div class="image2">
+        <img src="../../public/images/solarium.webp" alt="solarium" />
+        <article>
+          <img src="../../public/images/" alt="" />
+          <h3>Luxuary Room</h3>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+            eiusmod tempor.
+          </p>
+        </article>
+      </div>
+    </article>
+    <article class="text">
+      <div>
+        <header>ABOUT US</header>
+        <h5>Discover Our Underground.</h5>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <button>BOOK NOW</button>
+      </div>
+    </article>
+  </section>
+</div>
+
+<style define:vars={{ gold }}>
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 40px;
+    background-size: cover;
+    .text {
+      margin: auto;
+      background: url("../../public/images/aboutUsBackground.webp") center;
+      background-size: cover;
+      order: -1;
+      div {
+        padding: 50px 30px;
+        background: linear-gradient(
+          135deg,
+          rgb(248, 248, 248) 60%,
+          rgba(248, 248, 248, 0) 100%
+        );
+      }
+      header {
+        font:
+          700 16px "Archivo",
+          sans-serif;
+        color: gray;
+        letter-spacing: 2px;
+      }
+      h5 {
+        padding: 20px 0;
+        font:
+          100 56px "Old Standard TT",
+          serif;
+      }
+      p {
+        color: #777;
+        padding: 20px 0 30px;
+      }
+      button {
+        border: none;
+        background-color: var(--gold);
+        color: #fff;
+        padding: 20px 40px;
+        letter-spacing: 2px;
+        font:
+          16px "Archivo",
+          sans-serif;
+        font-weight: bold;
+      }
+    }
+    .images {
+      padding: 40px 0;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+          width: 270px;
+        }
+        article {
+          padding: 40px 35px;
+          padding-top: 120px;
+          width: 270px;
+          height: 300px;
+          text-align: center;
+          box-shadow: 1px 1px 10px #00000040;
+          h3 {
+            font:
+              400 24px "Archivo",
+              sans-serif;
+            padding-bottom: 30px;
+          }
+        }
+      }
+    }
+    .image1 article {
+      background: url("../../public/images/people.svg") 100% 25% no-repeat;
+      padding-top: 300px;
+    }
+    .image2 article {
+      background: url("../../public/images/calendar.svg") 50% 25% no-repeat;
+      background-color: #222;
+      color: #fff;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    .bg {
+      background: url("../../public/images/aboutUsBackground.webp") center;
+      background-size: cover;
+    }
+    section {
+      flex-direction: row;
+      padding: 40px 10px;
+      background: linear-gradient(
+        135deg,
+        rgb(248, 248, 248) 60%,
+        rgba(248, 248, 248, 0) 100%
+      );
+      .text {
+        order: 1;
+        width: 50%;
+      }
+      .text {
+        background: none;
+        div {
+          background: none;
+        }
+      }
+      .images {
+        flex-wrap: nowrap;
+        div {
+          display: flex;
+          flex-direction: column;
+          gap: 30px;
+        }
+        .image1 {
+          order:2;
+          position: relative;
+          bottom: -30px;
+        }
+        .image2 {
+          position: relative;
+          top: -30px;
+          img{
+            order: 2;
+          }
+        }
+      }
+    }
+  }
+</style>
