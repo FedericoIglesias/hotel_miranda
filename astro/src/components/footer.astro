@@ -60,7 +60,9 @@ import SocialIcons from "./socialIcons.astro";
 
 <style define:vars={{ gold }}>
   footer {
+    padding: 50px 0 0;
     background: url("../../public/images/bkgroundFooter.svg") center;
+    gap: 20px;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -70,8 +72,8 @@ import SocialIcons from "./socialIcons.astro";
       display: grid;
       grid-template-columns: 80px auto;
       grid-template-rows: auto auto auto;
-      padding: 10px;
-      max-width: 400px;
+      padding: 0 10px;
+      max-width: 350px;
       gap: 20px;
       div {
         grid-column: 1/2;
@@ -109,8 +111,8 @@ import SocialIcons from "./socialIcons.astro";
     }
     .services {
       width: 100%;
-      padding: 30px 10px;
-      max-width: 400px;
+      padding: 00px 10px;
+      max-width: 370px;
       ul {
         list-style: none;
         display: grid;
@@ -134,10 +136,9 @@ import SocialIcons from "./socialIcons.astro";
     .contact {
       display: flex;
       flex-direction: column;
-      width: 100%;
-      padding: 30px 10px;
+      padding: 0px 10px;
       gap: 20px;
-      max-width: 400px;
+      max-width: 350px;
       h6 {
         font-size: 28px;
         font-weight: 100;
@@ -165,12 +166,23 @@ import SocialIcons from "./socialIcons.astro";
         }
       }
     }
+    .copy {
+      margin-top: 20px;
+      width: 100%;
+      background-color: #fefefe;
+      padding: 10px 5%;
+      display: flex;
+      gap: 5px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      font-weight: bold;
+      font-size: 14px;
+    }
   }
-  @media (min-width: 1024) {
+  @media (min-width: 1024px) {
     footer {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-rows: 1fr auto;
+      flex-direction: row;
+      align-items: start;
     }
   }
 </style>
