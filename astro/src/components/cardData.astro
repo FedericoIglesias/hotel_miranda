@@ -1,0 +1,37 @@
+---
+import { gold } from "../layouts/Layout.astro";
+const { number, img, text } = Astro.props;
+---
+
+<article>
+  <img src={img} alt="" />
+  <p>{number}<span>+</span></p>
+  <p class="text">{text}</p>
+</article>
+
+<style>
+  article {
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    img {
+      width: 90px;
+    }
+    p {
+      font-size: 60px;
+      font-weight: bold;
+      color: white;
+      align-items: center;
+    }
+    span {
+      font-size: 10px;
+    }
+    .text {
+      font-size: 16px;
+      color: gray;
+      /* font-weight: 400; */
+    }
+  }
+</style>

@@ -1,0 +1,49 @@
+---
+import { gold } from "../layouts/Layout.astro";
+import CardData from "./cardData.astro";
+---
+
+<section>
+  <CardData
+    number="84K"
+    text="Projects are Completed"
+    img="../../public/images/rocket.svg"
+  />
+  <CardData
+    number="10M"
+    text="Active Backers Around World"
+    img="../../public/images/backers.svg"
+  />
+  <CardData
+    number="20K"
+    text="Categories Served"
+    img="../../public/images/rise.svg"
+  />
+  <CardData
+    number="100M"
+    text="Idea Rised Funds"
+    img="../../public/images/book.svg"
+  />
+</section>
+
+<style>
+  section {
+    background-color: #222;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding: 50px 30px;
+  }
+  @media screen and (min-width: 768px) {
+    section {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+  @media screen and (min-width: 1024px) {
+    section {
+      display: flex;
+      gap: 20px;
+      justify-content: space-around;
+    }
+  }
+</style>
