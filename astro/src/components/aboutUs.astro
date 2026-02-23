@@ -57,7 +57,7 @@ import GoldButton from "./goldButton.astro";
       background-size: cover;
       order: -1;
       div {
-        padding: 50px 30px;
+        padding: 50px 30px 70px;
         background: linear-gradient(
           135deg,
           rgb(248, 248, 248) 60%,
@@ -87,7 +87,6 @@ import GoldButton from "./goldButton.astro";
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
       div {
         display: flex;
         flex-direction: column;
@@ -115,13 +114,26 @@ import GoldButton from "./goldButton.astro";
       background: url("../../public/images/people.svg") 100% 25% no-repeat;
       padding-top: 300px;
     }
+    .image1 {
+      translate: 0px -80px;
+    }
     .image2 article {
       background: url("../../public/images/calendar.svg") 50% 25% no-repeat;
       background-color: #222;
       color: #fff;
     }
   }
-  @media screen and (min-width: 1024px) {
+  @media (min-width: 768px) {
+    section {
+      .images {
+        gap: 20px;
+      }
+      .image1 {
+        translate: 0px 0px;
+      }
+    }
+  }
+  @media (min-width: 1024px) {
     .bg {
       background: url("../../public/images/aboutUsBackground.webp") center;
       background-size: cover;
