@@ -1,0 +1,95 @@
+---
+import { gold } from "../layouts/Layout.astro";
+import CardMenu from "./cardMenu.astro";
+---
+
+<section>
+  <header><p>MENU</p></header>
+  <main>
+    <h3>Our Foods Menu</h3>
+    <div>
+      <CardMenu
+        title1="Fruit Parfait"
+        title2="Marmalade Selection"
+        title3="Cheese Plate"
+        img1="../../public/images/foodsMenu/fruit1.webp"
+        img2="../../public/images/foodsMenu/marmalade1.webp"
+        img3="../../public/images/foodsMenu/cheese1.webp"
+      />
+      <CardMenu
+        title1="Coctail & Drink"
+        title2="Selected Wines"
+        title3="Alcohol Free Cotail"
+        img1="../../public/images/foodsMenu/coctails1.webp"
+        img2="../../public/images/foodsMenu/wines1.webp"
+        img3="../../public/images/foodsMenu/alcoholFree1.webp"
+      />
+      <CardMenu
+        title1="Gourment Brunch"
+        title2="Dessert & Cake"
+        title3="Chocolate Plate"
+        img1="../../public/images/foodsMenu/brunch1.webp"
+        img2="../../public/images/foodsMenu/dessert1.webp"
+        img3="../../public/images/foodsMenu/choco1.webp"
+      />
+      <CardMenu
+        title1="Plant Based Food"
+        title2="Gluten Free Options"
+        title3="Salad Bar"
+        img1="../../public/images/foodsMenu/plant1.webp"
+        img2="../../public/images/foodsMenu/glutenFree1.webp"
+        img3="../../public/images/foodsMenu/salad1.webp"
+      />
+      <CardMenu
+        title1="Eggs & Bacon"
+        title2="Tea & Coffee"
+        title3="Chia Oatmeal"
+        img1="../../public/images/foodsMenu/eggsBacon1.webp"
+        img2="../../public/images/foodsMenu/teaCoffe1.webp"
+        img3="../../public/images/foodsMenu/chiaOat1.webp"
+      />
+    </div>
+  </main>
+</section>
+
+<style>
+  section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 10px;
+    header {
+      align-self: flex-start;
+      color: gray;
+      padding-bottom: 20px;
+      letter-spacing: 3px;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    h3 {
+      font-weight: 100;
+      font-size: 56px;
+      text-align: center;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    section {
+      justify-content: center;
+      align-items: center;
+      main {
+        margin: auto;
+      }
+      div {
+        max-width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+    }
+    header {
+      margin: auto;
+      width: 75%;
+    }
+  }
+</style>

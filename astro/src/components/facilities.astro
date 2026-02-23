@@ -6,12 +6,12 @@ import Cards from "./cards.astro";
   <header>FACILITIES</header>
   <h3>Core Features</h3>
   <div>
-    <Cards number='01' img='../../public/images/facilities1.svg' />
-    <Cards number='02' img='../../public/images/facilities2.svg' />
-    <Cards number='03' img='../../public/images/facilities3.svg' />
-    <Cards number='04' img='../../public/images/facilities4.svg' />
-    <Cards number='05' img='../../public/images/facilities5.svg' />
-    <Cards number='06' img='../../public/images/facilities6.svg' />
+    <Cards number="01" img="../../public/images/facilities1.svg" />
+    <Cards number="02" img="../../public/images/facilities2.svg" />
+    <Cards number="03" img="../../public/images/facilities3.svg" />
+    <Cards number="04" img="../../public/images/facilities4.svg" />
+    <Cards number="05" img="../../public/images/facilities5.svg" />
+    <Cards number="06" img="../../public/images/facilities6.svg" />
   </div>
 </section>
 
@@ -21,7 +21,7 @@ import Cards from "./cards.astro";
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding: 40px 0 ;
+    padding: 40px 0;
     header {
       text-align: center;
       font-family: sans-serif;
@@ -31,14 +31,14 @@ import Cards from "./cards.astro";
       font-weight: bold;
       padding: 10px 0;
     }
-    h3{
+    h3 {
       font-size: 56px;
       font-family: serif;
       text-align: center;
       font-weight: 50;
       padding: 20px 0;
     }
-    div{
+    div {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -46,15 +46,15 @@ import Cards from "./cards.astro";
       flex-wrap: wrap;
     }
   }
-  @media  screen and (min-width: 1024px) {
-    section{
-      h3{
+  @media screen and (min-width: 1024px) {
+    section {
+      h3 {
         font-size: 96px;
       }
-      div{
+      div {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
-        gap: 30px
+        gap: 30px;
       }
     }
   }
