@@ -1,5 +1,11 @@
 ---
 import Cards from "./cards.astro";
+let { bg } = Astro.props;
+let bg1 = "#fff";
+let bg2 = "#fdfdfd";
+let color = "#000";
+let header = "#777";
+bg === "Black" ? ((bg1 = "#000"),(bg2 = "#222"), (color = "#fff"), (header = "#fff")) : null;
 ---
 
 <section>
@@ -15,19 +21,21 @@ import Cards from "./cards.astro";
   </div>
 </section>
 
-<style>
+<style define:vars={{ bg1,bg2, color, header }}>
   section {
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     padding: 40px 0;
+    color: var(--color);
+    background-color: var(--bg1);
     header {
       text-align: center;
       font-family: sans-serif;
       font-size: 14px;
       letter-spacing: 2px;
-      color: #777;
+      color: var(--header);
       font-weight: bold;
       padding: 10px 0;
     }
@@ -42,8 +50,11 @@ import Cards from "./cards.astro";
       display: flex;
       align-items: center;
       justify-content: center;
-      padding: 0 10%;
+      
       flex-wrap: wrap;
+      article{
+        background-color: var(--bg2);
+      }
     }
   }
   @media screen and (min-width: 1024px) {
