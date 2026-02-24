@@ -1,0 +1,59 @@
+---
+const { header, text, page } = Astro.props;
+import { gold } from "../layouts/Layout.astro";
+---
+
+<section>
+  <div>
+    <header>
+      {header}
+    </header>
+    <h2>{page}</h2>
+    <p>Home <span>| {text}</span></p>
+  </div>
+</section>
+
+<style define:vars={{gold}}>
+  section {
+    background: url("../../public/images/pageHeaderBackground.webp") no-repeat
+      center;
+      position: relative;
+    background-attachment: fixed;
+    height: 40dvh;
+    div {
+      background-color: rgba(0, 0, 0, 0.5);
+      width: 100%;
+      height: 100%;
+      padding: 50px 10% 0;
+      color: white;
+      header {
+        font-size: 14px;
+        letter-spacing: 3px;
+        font-weight: bold;
+        text-align: start;
+        padding-bottom: 40px;
+      }
+      h2 {
+        font-size: 56px;
+        font-weight: 100;
+      }
+      p {
+        background-color: white;
+        color: black;
+        width: 160px;
+        padding:15px 10px;
+        text-align: center;
+        align-self: flex-end;
+        font-size: 16px;
+        position: absolute;
+        bottom: 0;
+        right: 10%;
+        font-weight: 600;
+        letter-spacing: -0.48px;
+        span{
+          color: var(--gold);
+        }
+      }
+    }
+  }
+</style>
