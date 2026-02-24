@@ -1,0 +1,86 @@
+---
+import { gold } from "../layouts/Layout.astro";
+import CardCounter from "./cardCounter.astro";
+---
+
+<section>
+  <header>COUNTER</header>
+  <main>
+    <p>Some Fun Facts</p>
+    <div>
+      <CardCounter
+        text="Happy Users"
+        tittle="8000"
+        img="../../public/images/factPersonIcon.svg"
+      />
+      <CardCounter
+        text="Reviews & Appriciate"
+        tittle="10M"
+        img="../../public/images/factStartIcon.svg"
+      />
+      <CardCounter
+        text="Country Coverage"
+        tittle="100"
+        img="../../public/images/factWorldIcon.svg"
+      />
+    </div>
+  </main>
+  <footer>
+    <img src="../../public/images/funFact2.webp" alt="bathroom" />
+    <img src="../../public/images/funFact1.webp" alt="mountain" />
+  </footer>
+</section>
+
+<style define:vars={{ gold }}>
+  section {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    header {
+      color: #777;
+      letter-spacing: 1px;
+      font-weight: bold;
+      align-self: start;
+    }
+    main {
+      padding: 20px 0;
+      width: 100%;
+      p {
+        font-size: 56px;
+        font-weight: 100;
+        padding-bottom: 10px;
+      }
+      div {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 10px;
+        padding: 50px 0;
+      }
+    }
+    footer {
+      padding-bottom: 20px;
+      img {
+        width: 100%;
+        max-width: 450px;
+      }
+    }
+  }
+  @media (min-width: 1024px) {
+    section {
+      min-width: 100%;
+      padding: 3%;
+      main {
+        div {
+          flex-direction: row;
+          gap: 20px;
+        }
+      }
+    }
+  }
+</style>
