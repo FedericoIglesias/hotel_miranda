@@ -1,0 +1,67 @@
+---
+import { gold } from "../layouts/Layout.astro";
+import GoldButton from "./goldButton.astro";
+---
+
+<section>
+  <img src="../../public/images/AboutFacility.webp" alt="restaurant" />
+  <div>
+    <header><p>RESTAURANT</p></header>
+    <p class="tittle">Get Restaurant Facilities & Many Other More</p>
+    <p class="text">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tem por incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+      veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+    </p>
+    <GoldButton>TAKE A TOUR</GoldButton>
+  </div>
+</section>
+
+<style define:vars={{ gold }}>
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 0;
+    gap: 20px;
+    img {
+      width: 80%;
+      max-width: 420px;
+    }
+    div {
+      width: 80%;
+      max-width: 420px;
+      padding: 20px 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      header {
+        color: #777;
+        font-weight: bold;
+        letter-spacing: 2px;
+      }
+      .tittle {
+        font-size: 24px;
+        font-weight: 100;
+        font-family: serif;
+      }
+      .text {
+        color: #999;
+      }
+    }
+  }
+  @media (min-width: 768px) {
+    section {
+      div {
+        gap: 30px;
+        .tittle {
+          font-size: 40px;
+        }
+        .text{
+          font-size: 18px;
+        }
+      }
+    }
+  }
+</style>
