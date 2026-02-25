@@ -1,17 +1,18 @@
 ---
 import { gold } from "../layouts/Layout.astro";
 import GoldButton from "./goldButton.astro";
+const { img, sale, price } = Astro.props;
 ---
 
 <section>
   <div class="bg">
-    <img src="../../public/images/offerRooms/offerRoom1.webp" alt="room" />
+    <img src={img} alt="room" />
     <div class="line"></div>
     <div class="pricing">
       <p class="pr">
-        <span class="price1">$500</span><span class="price2">/Night</span>
+        <span class="price1">${price}</span><span class="price2">/Night</span>
       </p>
-      <p class="price">$350<span>/Night</span></p>
+      <p class="price">${sale}<span>/Night</span></p>
     </div>
   </div>
   <main>
@@ -21,9 +22,9 @@ import GoldButton from "./goldButton.astro";
     </header>
     <div class="pricingMain">
       <p class="pr">
-        <span class="price1">$500</span><span class="price2">/Night</span>
+        <span class="price1">${price}</span><span class="price2">/Night</span>
       </p>
-      <p class="price">$350<span>/Night</span></p>
+      <p class="price">${sale}<span>/Night</span></p>
     </div>
     <hr />
     <p class="text">
@@ -176,7 +177,7 @@ import GoldButton from "./goldButton.astro";
         }
       }
     }
-    footer{
+    footer {
       height: 50px;
       width: 100%;
       background-color: #fafafa;
@@ -186,7 +187,7 @@ import GoldButton from "./goldButton.astro";
     section {
       div {
         img {
-          width: 100%;
+          width: 1000px;
         }
         .pricing {
           display: none;
