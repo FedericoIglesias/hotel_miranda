@@ -1,0 +1,40 @@
+---
+import { gold } from "../layouts/Layout.astro";
+import PopularCard from "./popularCard.astro";
+---
+
+<section>
+  <header>POPULAR LIST</header>
+  <h5>Popular Rooms</h5>
+  <div>
+    <PopularCard img="../../public/images/offerRooms/hotelRoom3.webp" />
+    <PopularCard img="../../public/images/offerRooms/hotelRoom1.webp" />
+    <PopularCard img="../../public/images/offerRooms/hotelRoom2.webp" />
+  </div>
+</section>
+
+<style define:vars={{ gold }}>
+  section {
+    background-color: #222;
+    color: white;
+    display: flex;
+    padding: 40px 10px;
+    flex-direction: column;
+    align-items: center;
+    header {
+      color: var(--gold);
+      font-weight: 100;
+      padding-bottom: 20px;
+    }
+    h5 {
+      font-size: 40px;
+      padding-bottom: 30px;
+    }
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+  }
+</style>
