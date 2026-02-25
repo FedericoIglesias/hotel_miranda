@@ -5,7 +5,14 @@ const { img } = Astro.props;
 
 <article>
   <img src={img} alt="" />
-  <div></div>
+  <div class="services">
+    <img src="../../public/images/amenities/airCondIcon.svg" alt="air" />
+    <img src="../../public/images/amenities/bedIcon.svg" alt="bed" />
+    <img src="../../public/images/amenities/breakIcon.svg" alt="break" />
+    <img src="../../public/images/amenities/cleanIcon.svg" alt="clean" />
+    <img src="../../public/images/amenities/wifiIcon.svg" alt="wifi" />
+    <img src="../../public/images/amenities/showerIcon.svg" alt="shower" />
+  </div>
   <main>
     <h6>Minimal Duplex Room</h6>
     <p>
@@ -16,13 +23,28 @@ const { img } = Astro.props;
   </main>
 </article>
 
-<style>
+<style define:vars={{ gold }}>
   article {
     color: black;
     background-color: white;
-    max-width: 350px;
+    max-width: 335px;
+    position: relative;
     img {
       width: 100%;
+    }
+    .services {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      width: 250px;
+      background-color: #fdfdfd;
+      padding: 5px;
+      margin: auto;
+      translate: 0 -20px;
+      box-shadow: 1px 1px 1px gray;
+      img {
+        width: 20px;
+      }
     }
     main {
       padding: 20px 10px;
