@@ -1,6 +1,7 @@
 ---
 import Banner2 from "../components/banner2.astro";
 import CardContact from "../components/cardContact.astro";
+import Form from "../components/form.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
@@ -27,6 +28,7 @@ import Layout from "../layouts/Layout.astro";
         number="03"
       />
     </section>
+    <Form />
   </main>
 </Layout>
 
@@ -37,7 +39,7 @@ import Layout from "../layouts/Layout.astro";
     gap: 30px;
     padding: 40px;
   }
-  @media (min-width:1024px) {
+  @media (min-width: 1024px) {
     .card {
       display: flex;
       justify-content: space-between;
