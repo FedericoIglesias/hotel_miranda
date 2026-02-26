@@ -1,8 +1,47 @@
 ---
 import Banner2 from "../components/banner2.astro";
+import CardContact from "../components/cardContact.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout>
-  <main><Banner2 header="THE LUXURY DETAILS" page="New Details" text="Contact"/></main>
+  <main>
+    <Banner2 header="THE LUXURY DETAILS" page="New Details" text="Contact" />
+    <section class="card">
+      <CardContact
+        img="../../public/images/emailIcon.svg"
+        text="Email Address"
+        info="example@mail.com"
+        number="01"
+      />
+      <CardContact
+        img="../../public/images/phoneIcon.svg"
+        text="Phone Number"
+        info="+34 699 999 999"
+        number="02"
+      />
+      <CardContact
+        img="../../public/images/mappinIcon.svg"
+        text="Office Address"
+        info="Acá cerca"
+        number="03"
+      />
+    </section>
+  </main>
 </Layout>
+
+<style>
+  .card {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 40px;
+  }
+  @media (min-width:1024px) {
+    .card {
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+    }
+  }
+</style>
