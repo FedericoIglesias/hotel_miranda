@@ -1,0 +1,18 @@
+---
+import { Leaflet, Marker, Popup } from "astro-leaflet";
+---
+
+<div id="map">
+  <Leaflet options={{ center: [18.18,  -64.49], zoom: 10 }}>
+    <Marker latlng={[18.73,  -64.4]}>
+      <Popup content="<b>Hello world!</b><br>Here is Hotel Miranda" open />
+    </Marker>
+  </Leaflet>
+</div>
+
+<style>
+  #map {
+    width: 80%;
+    margin: auto;
+  }
+</style>
