@@ -1,6 +1,7 @@
 ---
 import Footer from "../components/footer.astro";
 import MenuBar from "../components/menu_bar.astro";
+import MiniBar from "../components/miniBar.astro";
 
 export const gold = "#bead8e";
 ---
@@ -16,6 +17,7 @@ export const gold = "#bead8e";
     <title>Hotel Miranda</title>
   </head>
   <body>
+    <MiniBar/>
     <MenuBar />
     <slot />
     <Footer />
