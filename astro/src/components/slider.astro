@@ -1,0 +1,48 @@
+---
+import { Swiper, SwiperWrapper, SwiperSlide } from "astro-swiper";
+import Cards from "./cards.astro";
+---
+
+<Swiper
+  options={{
+    // check options at https://swiperjs.com/swiper-api
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+      waitForTransition: false,
+    },
+    loop: true,
+  }}
+>
+  <SwiperWrapper>
+    <SwiperSlide>
+      <Cards number="01" img="../../public/images/facilities1.svg" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <Cards number="02" img="../../public/images/facilities2.svg" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <Cards number="03" img="../../public/images/facilities3.svg" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <Cards number="04" img="../../public/images/facilities4.svg" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <Cards number="05" img="../../public/images/facilities5.svg" />
+    </SwiperSlide>
+    <SwiperSlide>
+      <Cards number="06" img="../../public/images/facilities6.svg" />
+    </SwiperSlide>
+  </SwiperWrapper>
+</Swiper>
+
+<style>
+  .swiper {
+    max-width: 455px;
+    aspect-ratio: 16/9;
+  }
+
+  img {
+    width: 100%;
+  }
+</style>

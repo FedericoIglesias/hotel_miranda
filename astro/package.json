@@ -12,7 +12,12 @@
     "@astrojs/sitemap": "^3.7.0",
     "astro": "^5.17.1",
     "astro-leaflet": "^1.10.0",
-    "leaflet": "^1.9.4"
+    "astro-splide": "^2.0.2",
+    "astro-swiper": "^2.1.1",
+    "leaflet": "^1.9.4",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "swiper": "^12.1.2"
   },
   "devDependencies": {
     "@types/leaflet": "^1.9.21"
